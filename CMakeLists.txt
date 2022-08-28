@@ -177,7 +177,7 @@ configure_file( ${PROJECT_BINARY_DIR}/opensslconf.h.cmake
 add_subdirectory(crypto)
 add_subdirectory(ssl)
 
-if( WITH_APPS AND NOT ANDROID AND NOT IOS )
+# if( WITH_APPS AND NOT ANDROID AND NOT IOS )
   add_subdirectory(apps)
 
   file( READ ${PROJECT_SOURCE_DIR}/c_rehash.cmake C_REHASH )
@@ -193,7 +193,7 @@ if( WITH_APPS AND NOT ANDROID AND NOT IOS )
   install( CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/ssl/misc)" )
   install( CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/ssl/private)" )
   install( FILES ${PROJECT_BINARY_DIR}/c_rehash DESTINATION bin )
-endif()
+# endif()
 
 file( GLOB PUBLIC_HEADERS "${PROJECT_BINARY_DIR}/include/openssl/*.h" )
 install( FILES ${PUBLIC_HEADERS} DESTINATION include/openssl )
