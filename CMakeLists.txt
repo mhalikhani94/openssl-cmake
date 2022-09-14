@@ -192,7 +192,7 @@ add_subdirectory(ssl)
   install( CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/ssl/certs)" )
   install( CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/ssl/misc)" )
   install( CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}\${CMAKE_INSTALL_PREFIX}/ssl/private)" )
-  install( FILES ${PROJECT_BINARY_DIR}/c_rehash DESTINATION bin )
+# install( FILES ${PROJECT_BINARY_DIR}/c_rehash DESTINATION bin )
 # endif()
 
 file( GLOB PUBLIC_HEADERS "${PROJECT_BINARY_DIR}/include/openssl/*.h" )
@@ -202,7 +202,7 @@ install( FILES
   FAQ LICENSE README README.ENGINE
   DESTINATION share/openssl )
 
-install( DIRECTORY doc DESTINATION share )
+# install( DIRECTORY doc DESTINATION share )
 
 configure_file(
   ${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in
