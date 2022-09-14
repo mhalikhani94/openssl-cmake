@@ -62,10 +62,10 @@ if( ${CMAKE_SYSTEM_NAME} STREQUAL "SunOS" )
   target_link_libraries( openssl socket nsl )
 endif()
 
-install( TARGETS openssl
-    RUNTIME DESTINATION bin )
+# install( TARGETS openssl
+#    RUNTIME DESTINATION bin )
 
-install( FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/CA.pl
-  ${CMAKE_CURRENT_BINARY_DIR}/tsget
-  DESTINATION share/openssl )
+# install( FILES
+#  ${CMAKE_CURRENT_BINARY_DIR}/CA.pl
+#  ${CMAKE_CURRENT_BINARY_DIR}/tsget
+#  DESTINATION share/openssl )
